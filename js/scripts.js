@@ -10,7 +10,7 @@ $(document).ready(function(){
     var verbInput = $("#verb").val();
     var noun3Input = $("#noun3").val();
     var worldNameInput = $("#worldName").val();
-
+    var worldNameCapitalize = worldNameInput.charAt(0).toUpperCase() + worldNameInput.slice(1);
 
     $(".person1").append(person1Input);
     $(".person2").append(person2Input);
@@ -21,11 +21,12 @@ $(document).ready(function(){
     $(".noun2").append(noun2Input);
     $(".verb").append(verbInput);
     $(".noun3").append(noun3Input);
-    $(".worldName").append(worldNameInput);
+    $(".worldName").append(worldNameCapitalize);
 
     $("#story").show();
 
     event.preventDefault();
 
+    $("#submitButton").attr("disabled", true);
   });
 });
